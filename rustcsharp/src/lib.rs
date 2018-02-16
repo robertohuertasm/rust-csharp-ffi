@@ -47,6 +47,7 @@ pub fn test_loop() -> i32 {
 }
 
 #[repr(C)]
+#[derive(Debug)]
 pub struct SampleStruct {    
     pub iterations: i32,
     pub duration: i64,
@@ -55,10 +56,10 @@ pub struct SampleStruct {
 #[no_mangle]
 pub fn time() -> SampleStruct {
     let start = PreciseTime::now();
-    let k = test_loop();
+    let iterations = test_loop();
     let end = PreciseTime::now();
     let duration = start.to(end).num_milliseconds();
-    SampleStruct { iterations: k, duration: duration }
+    SampleStruct { iterations, duration }
 }
 
 /*

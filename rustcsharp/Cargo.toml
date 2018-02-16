@@ -5,7 +5,11 @@ authors = ["Roberto <roberto.huertas@outlook.com>"]
 
 [lib]
 name = "rustcsharp"
-crate-type = ["cdylib"]
+crate-type = ["lib", "cdylib"]
+
+[profile.release]
+codegen-units = 1
+opt-level = 3
 
 [dependencies]
 time = "0.1"

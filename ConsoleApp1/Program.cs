@@ -14,9 +14,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            //var addedNumbers = add_numbers(10, 5);
-            //Console.WriteLine(addedNumbers);
+            //Console.WriteLine("Hello World!");
+            var addedNumbers = add_numbers(10, 5);
+            Console.WriteLine(addedNumbers);
             //var h = hello_world();
             //Console.WriteLine(Marshal.PtrToStringAnsi(h));
             //free_string();
@@ -24,7 +24,6 @@ namespace ConsoleApp1
             //var l = test_loop();
             var t = time();
             var f = DateTime.Now;
-            //Console.WriteLine("Rust loop {0} - {1}", (f - d).TotalMilliseconds, l);
             
             Console.WriteLine("Inside Rust: {0} - {1}ms", t.iterations, t.duration);
             Console.WriteLine("Outside Rust: {0}ms", (f - d).TotalMilliseconds);
