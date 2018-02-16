@@ -1,0 +1,11 @@
+[package]
+name = "rustcsharp"
+version = "0.1.0"
+authors = ["Roberto <roberto.huertas@outlook.com>"]
+
+[lib]
+name = "rustcsharp"
+crate-type = ["cdylib"]
+
+[dependencies]
+time = "0.1"
